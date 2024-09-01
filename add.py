@@ -7,7 +7,7 @@ def add_numbers(num1, num2):
 num1 = float(input("Enter first number:"))
 num2 = float(input("Enter second number:"))
 
-"""calculate sum"""
+"""calculate total sum"""
 total_sum = add_numbers(num1, num2)
 
 """print result"""
