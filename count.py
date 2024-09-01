@@ -1,3 +1,4 @@
-def is_even(num):
-    """Check if a number is even and return True if it is and False if otherwise"""
-    return num % 2 == 0
+def count_vowels(str):
+   """returns the count of vowels (a, e, i, o, u) in the string. Ignore case sensitivity """
+   vowels = 'aeiouAEIOU'
+   return sum(1 for char in str if char in vowels)
