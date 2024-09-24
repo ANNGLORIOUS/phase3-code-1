@@ -1,18 +1,13 @@
-def merge_dicts():
-    """merges two dictionaries into a single dictionary. If there are any common keys, their values should be summed up.
-"""
-    dict1 = {'a': 1, 'b': 2, 'c': 3}
-    dict2 = {'b': 4, 'c': 6, 'd': 6}
+def merge_dicts(dict1, dict2):
+    merged_dict = dict1.copy()
+    for key, value in dict2.items():
+        if key in merged_dict:
+            merged_dict[key] += value
+        else:
+            merged_dict[key] = value
+    return merged_dict
 
-    merged_dict = {**dict1, **dict2}
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
 
-    for key in merged_dict.keys():
-        if key in dict1 and key in dict2:
-            merged_dict[key] = dict1[key] + dict2[key]
-            
-            return merged_dict
-
-merge_dicts()
-        
-"""test function"""
-print(merge_dicts())
+print(merge_dicts(dict1, dict2))  
